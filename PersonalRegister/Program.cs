@@ -27,9 +27,22 @@ namespace PersonalRegister
 
             foreach (var item in payroll.GetEmployees())
             {
-                Console.WriteLine($"Name: {item.Name} Salary: {item.Salary}");
                 Console.WriteLine(item);
+
+                switch (item.SalaryLevel)
+                {
+                    case SalaryLevel.Junior:
+                        Console.WriteLine("Do Junior Work");
+                        break;
+                    case SalaryLevel.Senior:
+                        Console.WriteLine("Do Senior Work");
+                        break;
+                    default:
+                        break;
+                }
+                Console.WriteLine("---------------------------");
             }
+
         }
     }
 
